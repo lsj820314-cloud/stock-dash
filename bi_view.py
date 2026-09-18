@@ -6,9 +6,9 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
-GOLD = '#b1883c'
-TEAL = '#37867b'
-INK = '#493e2f'
+GOLD = '#2563EB'
+TEAL = '#0A9B72'
+INK = '#17233E'
 
 
 def theme():
@@ -28,8 +28,8 @@ def theme():
 
 
 def draw(chart):
-    st.altair_chart(chart.configure(background='#fffdf9').configure_view(stroke=None)
-                    .configure_axis(labelColor=INK,titleColor=INK,gridColor='#eee8dd',labelFontSize=13,titleFontSize=13)
+    st.altair_chart(chart.configure(background='#FFFFFF').configure_view(stroke=None)
+                    .configure_axis(labelColor=INK,titleColor=INK,gridColor='#E8EEF6',labelFontSize=13,titleFontSize=13)
                     .configure_legend(labelColor=INK,titleColor=INK,labelFontSize=13), use_container_width=True)
 
 
@@ -110,7 +110,7 @@ def detail(r):
             df=pd.DataFrame([{'기간':f['prior_period'],'영업이익':f['prior_operating_profit']},{'기간':f['period'],'영업이익':f['operating_profit']}])
             draw(alt.Chart(df).mark_bar(size=45,cornerRadiusTopLeft=4,cornerRadiusTopRight=4).encode(
                 x=alt.X('기간:O',title=None,axis=alt.Axis(labelAngle=0)),y=alt.Y('영업이익:Q',title=f['unit']),
-                color=alt.Color('기간:N',scale=alt.Scale(range=['#d8c8a7',GOLD]),legend=None),tooltip=['기간',alt.Tooltip('영업이익:Q',format=',.1f')]).properties(height=210))
+                color=alt.Color('기간:N',scale=alt.Scale(range=['#BFDBFE',GOLD]),legend=None),tooltip=['기간',alt.Tooltip('영업이익:Q',format=',.1f')]).properties(height=210))
             margin=f['operating_profit']/f['revenue']*100 if f['revenue']>0 else None
             st.caption(f"{f['basis']} · {f['currency']} {f['unit']}"+(f' · 영업이익률 {margin:.1f}%' if margin is not None else ''))
         else:st.info('같은 기간의 전년·당년 실적이 필요합니다.')
