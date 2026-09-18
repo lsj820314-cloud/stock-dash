@@ -13,17 +13,17 @@ INK = '#493e2f'
 
 def theme():
     st.markdown('''<style>
-    .stApp{background:#f8f6f1;color:#352e25}
-    [data-testid="stSidebar"]{background:#eee7da!important}
-    [data-testid="stSidebar"] *{color:#493e2f!important}
-    .block-container{max-width:1400px;padding-top:2rem}
-    [data-testid="stVerticalBlockBorderWrapper"]>div{border-color:#e7e0d3!important;border-radius:16px!important;background:#fffdf9}
-    [data-testid="stMetric"]{background:#fffdf9;border:1px solid #e7e0d3;border-radius:14px;padding:18px 22px}
-    [data-testid="stMetricValue"]{font-family:Georgia,serif;color:#715625}
-    .stButton>button[kind="primary"]{background:#9a742f;border-color:#9a742f;color:white}
-    .px-eyebrow{font-size:13px;letter-spacing:2px;color:#98763a;margin:0 0 5px}
-    .px-business{padding:20px 22px;border-left:3px solid #b1883c;background:#f4efe4;border-radius:0 12px 12px 0;font-size:16px;line-height:1.8}
-    h1,h2,h3{color:#493e2f!important;letter-spacing:-.03em}
+    .stApp{background:linear-gradient(180deg,#F7F9FD 0%,#F3F6FB 100%);color:#17233E}
+    [data-testid="stSidebar"]{background:#FFFFFF!important;border-right:1px solid #E5EAF2!important}
+    [data-testid="stSidebar"] *{color:#52627C}
+    .block-container{max-width:1540px;padding-top:1.25rem}
+    [data-testid="stVerticalBlockBorderWrapper"]>div{border-color:#E5EAF2!important;border-radius:18px!important;background:#FFFFFF}
+    [data-testid="stMetric"]{background:#FFFFFF;border:1px solid #E5EAF2;border-radius:18px;padding:18px 20px;box-shadow:0 12px 32px rgba(37,70,125,.07)}
+    [data-testid="stMetricValue"]{color:#17233E;font-weight:850}
+    .stButton>button[kind="primary"]{background:linear-gradient(135deg,#2563EB,#4F8CFF);border-color:#2563EB;color:white}
+    .px-eyebrow{font-size:12px;letter-spacing:1.8px;color:#2563EB;margin:0 0 5px}
+    .px-business{padding:20px 22px;border-left:3px solid #2563EB;background:#F5F8FF;border-radius:0 12px 12px 0;font-size:15px;line-height:1.8}
+    h1,h2,h3{color:#17233E!important;letter-spacing:-.03em}
     </style>''', unsafe_allow_html=True)
 
 
