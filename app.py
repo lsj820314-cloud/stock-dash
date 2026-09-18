@@ -22,7 +22,7 @@ from ui_v2 import apply_theme, brand, card, empty_state, hero, source_badge
 
 load_dotenv()
 st.set_page_config(
-    page_title="StockDash · PlanX Investment OS",
+    page_title="내 주식 대시보드 · StockDash",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="expanded",
