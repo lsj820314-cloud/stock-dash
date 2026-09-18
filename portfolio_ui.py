@@ -9,12 +9,13 @@ import pandas as pd
 import streamlit as st
 
 from automatic import brief
+from ui_v2 import hero
 from broker_kis import BrokerError, KIS
 from providers import Official
 
 
 def render_portfolio(store, sample_mode):
-    st.header('내 계좌 자동 분석')
+    hero('내 계좌 자동 분석', '보유종목·평가손익·비중을 한 화면에서 확인하고 기업 분석까지 이어집니다.', 'PORTFOLIO')
     st.caption('한국투자증권 국내주식 · 잔고 조회와 분석 · 조회 시점 기준')
     with st.expander('처음 한 번 · 계좌 연결 방법'):
         st.markdown('1. 한국투자증권 Open API를 신청하고 사용할 계좌의 App Key와 App Secret을 발급받습니다.\n2. Streamlit 앱 관리 → Settings → Secrets에 아래 항목을 추가합니다.\n3. 저장 후 앱을 다시 열고 계좌 불러오기·분석을 누릅니다.')
